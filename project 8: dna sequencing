@@ -1,0 +1,33 @@
+// this program helps to determine whether or not there is a protein in a given strand of dna! 🧬✨
+public class DNA {
+ 
+  public static void main(String[] args) {
+    //  -. .-.   .-. .-.   .
+    //    \   \ /   \   \ / 
+    //   / \   \   / \   \  
+    //  ~   `-~ `-`   `-~ `-
+    String dna1 = "ATGCGATACGCTTGA";
+    String dna2 = "ATGCGATACGTGA";
+    String dna3 = "ATTAATATGTACTGA"; 
+    String dna = dna2; 
+
+    System.out.println("length of dna is " + dna.length() + " 📐");
+
+    int beginning = dna.indexOf("ATG");
+    System.out.println("start is " + beginning);
+
+    int ending = dna.indexOf("TGA");
+    System.out.println("end is " + ending);
+
+    if(beginning != -1 && ending != -1 && (beginning - ending) % 3 == 0){
+
+      String protein = dna.substring(beginning, ending + 3);
+      System.out.println("protein: " + protein);
+
+      System.out.println("there is a protein and a dividing nucleotide!");
+    }else{
+      System.out.println("no protein :(");
+    }
+ 
+}
+}
