@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+class Playlist {
+  
+  public static void main(String[] args) {
+   ArrayList<String> desertIslandPlaylist = new ArrayList<String>(); 
+   desertIslandPlaylist.add("Regents Park - Bruno Major");
+   desertIslandPlaylist.add("Fly Love - Jamie Foxx"); 
+   desertIslandPlaylist.add("Budapest - George Ezra"); 
+   desertIslandPlaylist.add("Super Trouper - Mamma Mia Cast");
+   desertIslandPlaylist.add("Blue Moon - Billie Holiday"); 
+   desertIslandPlaylist.add("Send Me On My Way - Rusted Root"); 
+   desertIslandPlaylist.add("Soldier, Poet, King - The Oh Hellos");
+   System.out.println(desertIslandPlaylist);
+   // cutting it down 
+   System.out.println(desertIslandPlaylist.size());
+   desertIslandPlaylist.remove("Send Me On My Way - Rusted Root"); 
+   desertIslandPlaylist.remove("Soldier, Poet, King - The Oh Hellos");
+   System.out.println(desertIslandPlaylist); 
+   // swapping songs 
+   int indexA = desertIslandPlaylist.indexOf("Fly Love - Jamie Foxx"); 
+   System.out.println(indexA);
+   int indexB = desertIslandPlaylist.indexOf("Budapest - George Ezra"); 
+   System.out.println(indexB); 
+   String tempA = "Fly Love - Jamie Foxx"; 
+   desertIslandPlaylist.set(indexA, "Budapest - George Ezra"); 
+   System.out.println(desertIslandPlaylist); 
+   desertIslandPlaylist.set(indexB, "Fly Love - Jamie Foxx"); 
+   System.out.println(desertIslandPlaylist); 
+  }
+  
+}
